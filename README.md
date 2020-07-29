@@ -10,3 +10,4 @@
 2. install https://cran.r-project.org/bin/windows/Rtools/
 3. library(devtools)
 4. install_github("iii-org-tw/Hmisc")
+5. Execte test.R script under Validate_code/R directory
