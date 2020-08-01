@@ -19,14 +19,22 @@ For testing, please download HIGGS.csv and put it into data directory
 
 **JAVA**
 
-1. `sudo docker build -t percentile - < Dockerfile`
+1. Build the image.
 
-2. `sudo docker run --name bash --rm -i -t percentile`
+    `sudo docker build -t percentile - < Dockerfile`
 
-3. `cd java-percentile-test`
+2. Create a container and run it.
+
+    `sudo docker run --name bash --rm -i -t percentile`
+
+3. Get into the test directory.
+
+    `cd java-percentile-test`
 
 4. Download 'HIGGS.csv'.
 
-4. `mvn exec:java -D"exec.mainClass"="org.ioxcenter.App"`
+5. Compile and run the test.
 
-5. Input the path to 'HIGGS.csv' and it will start the test.
+    `mvn exec:java -D"exec.mainClass"="org.ioxcenter.App"`
+
+6. Input the path to 'HIGGS.csv' and it will start the test.
