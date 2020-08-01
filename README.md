@@ -1,21 +1,44 @@
-# Validate Process
+# Validate Process  
+**Testing Data**  
+1. Enter data directory
+
+    `cd data`
+
+2. Run the download script.
+
+    `bash download.sh`  
+    
 **Python**
 
-1. git clone https://github.com/iii-org-tw/numpy --branch ready_version
-2. Install from source according to [numpy tutorial](https://numpy.org/doc/stable/user/building.html).
-3. Execute test.py under Validate_code/Python directory
+1. Enter Python directory
+    
+    `cd Python`
 
-**R**
-1. install.packages("devtools")
-2. install https://cran.r-project.org/bin/windows/Rtools/
-3. library(devtools)
-4. install_github("iii-org-tw/Hmisc")
-5. Execte test.R script under Validate_code/R directory
+2. Build the image.
 
-**Testing Data**  
-For testing, please download HIGGS.csv and put it into data directory
+    `sudo docker build -t python-numpy .`
 
+3. Create a container and run it.
 
+    `sudo docker run --name bash --rm -i -t python-numpy`
+    
+4. For validation, please see the README.md inside Python directory.
+
+**R**  
+
+1. Enter R directory
+    
+    `cd R`
+
+2. Build the image.
+
+    `sudo docker build -t R-wq .`
+
+3. Create a container and run it.
+
+    `sudo docker run --name bash --rm -i -t R-wq`
+    
+4. For validation, please see the README.md inside R directory.
 
 **JAVA**
 
