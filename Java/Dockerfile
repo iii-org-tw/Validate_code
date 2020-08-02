@@ -22,3 +22,6 @@ RUN mvn install
 # clone test project
 WORKDIR /wq/java-percentile-test
 RUN git clone https://github.com/iii-org-tw/java-percentile-test.git /wq/java-percentile-test
+
+# add download.sh into container
+COPY download.sh .
